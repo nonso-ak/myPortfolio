@@ -1,43 +1,40 @@
-*{
+* {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     color: white;
-
 }
-header{
+
+header {
     position: fixed;
     background-color: transparent;
     padding: 20px 50px;
-    width: 95%;
+    width: 100%;
     top: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    z-index: 1000;
 }
-.logo{
+
+.logo {
     font-size: 30px;
     color: white;
     text-decoration: none;
     font-weight: 600;
-    
 }
-.logo::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color:  rgba(14, 187, 255, 0.918);
-    z-index: -1;
-    transition: .5s;
+
+.navbar {
+    display: flex;
+    align-items: center;
 }
-.navbar a{
+
+.navbar a {
     color: white;
     text-decoration: none;
     font-weight: 700;
@@ -45,11 +42,26 @@ header{
     transition: ease-in-out 0.3s all;
     font-size: 20px;
 }
+
 .navbar a:hover,
-.navbar a.active{
+.navbar a.active {
     color: rgb(56, 178, 253);
 }
-.home{
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.home {
     display: flex;
     align-items: center;
     height: 100vh;
@@ -57,93 +69,79 @@ header{
     background: url(../img/portrait-young-man-posing.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     background-blend-mode: darken;
 }
 
-
-.home-content{
+.home-content {
     max-width: 600px;
-    
 }
-h1{
+
+h1 {
     font-size: 48px;
     font-weight: 650;
 }
 
-h3{
+h3 {
     font-size: 30px;
     font-weight: 700;
     color: rgb(56, 178, 253);
 }
-p{
+
+p {
     font-size: 18px;
     margin: 20px 0 40px;
 }
-.btn{
+
+.btn {
     display: flex;
     justify-content: space-between;
     max-width: 230px;
 }
-.btn a{
+
+.btn a {
     position: relative;
-   display: inline-flex;
-   justify-content: center;
-   align-items: center;
-   background-color: rgba(14, 187, 255, 0.918);
-   height: 35px;
-   width: 100px;
-   border: 2px solid rgba(14, 187, 255, 0.918);
-   border-radius: 8px;
-   text-decoration: none;
-   color: black;
-   font-size: 16px;
-   font-weight: 600;
-   letter-spacing: 1px;
-   z-index: 1;
-   overflow: hidden;
-   transition: .5s;
-}
-.btn a:hover{
-    color: rgba(14, 187, 255, 0.918);
-    background-color: transparent;
-    border: 1px solid rgba(14, 187, 255, 0.918);
-}
-.btn a:nth-child(2){
-    background-color: transparent;
-    color: rgba(14, 187, 255, 0.918);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(14, 187, 255, 0.918);
+    height: 35px;
+    width: 100px;
     border: 2px solid rgba(14, 187, 255, 0.918);
-}
-.btn a:nth-child(2):hover{
+    border-radius: 8px;
+    text-decoration: none;
     color: black;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn a:hover {
+    color: rgba(14, 187, 255, 0.918);
+    background-color: transparent;
     border: 1px solid rgba(14, 187, 255, 0.918);
 }
-.btn a:nth-child(2)::before{
-   background-color:  rgba(14, 187, 255, 0.918);
+
+.btn a:nth-child(2) {
+    background-color: transparent;
+    color: rgba(14, 187, 255, 0.918);
 }
-.btn a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: rgba(1, 1, 30, 0.97);
+
+.btn a:nth-child(2):hover {
     color: black;
-    z-index: -1;
-    transition: .5s;
-    border-radius: 8px;
 }
-.btn a:hover::before{
-    width: 100%;
-}
-.home-ic{
+
+.home-ic {
     position: absolute;
     bottom: 25px;
     display: flex;
     justify-content: center;
 }
-.home-ic a{
+
+.home-ic a {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -152,30 +150,88 @@ p{
     height: 40px;
     background-color: transparent;
     font-size: 20px;
-    border: 2px solid  rgba(14, 187, 255, 0.918);
+    border: 2px solid rgba(14, 187, 255, 0.918);
     border-radius: 50%;
-    color:  rgba(14, 187, 255, 0.918);
+    color: rgba(14, 187, 255, 0.918);
     text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
     transition: .5s;
-}
-.home-ic a:hover{
-    color: black;
-}
-.home-ic a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color:  rgba(14, 187, 255, 0.918);
-    z-index: -1;
-    transition: .5s;
-}
-   
-.home-ic a:hover::before{
-    width: 100%;
 }
 
+.home-ic a:hover {
+    color: black;
+    background-color: rgba(14, 187, 255, 0.918);
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 60%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        transition: 0.5s ease;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar a {
+        margin: 20px 0;
+    }
+
+    .home {
+        padding: 0 20px;
+    }
+
+    .home-content {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .btn {
+        margin: 0 auto;        }
+    }
+
+    @media screen and (max-width: 480px) {
+        header {
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        .btn {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    }
